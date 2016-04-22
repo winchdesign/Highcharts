@@ -30,21 +30,23 @@ public class HighchartTest {
             driver.get(baseUrl + "/component/content/article/2-news/146-highcharts-5th-anniversary");
 
 
-            
+            Thread.sleep(5000);
+
 //            WebElement svgObj = driver.findElement(By.xpath("//*[@id='menu-main']/ul/li[3]/a"));
     //            Actions actionBuilder = new Actions(driver);
     //            actionBuilder.click(svgObj).build().perform();
 //           String attr =  driver.findElement(By.xpath("/*[@id='highcharts-0']/*[name()='svg']/[name()='SVG OBJECT']/*[name()='g'][7]/*[name()='g'][6]/*[name()='path'][starts-with(@d, 'M 8 286.88')]")).getText();
-//           String attr =  driver.findElement(By.xpath("/*[@id='highcharts-0']/*[name()='svg']/*[name()='g'][7]/*[name()='g'][6]/*[name()='path'][starts-with(@d, 'M 8 286.88')]")).getText();
+           String attr =  driver.findElement(By.xpath("//*[@id='highcharts-0']/*[name()='svg']/*[name()='g'][7]/*[name()='g'][6]/*[name()='path'][starts-with(@d, 'M 8 286.88')]")).getText();
+////
+//            String cssSelector = "/*[@id='highcharts-0']/*[name()='svg']/*[name()='g'][7]/*[name()='g'][6]/*[name()='path'][starts-with(@d, 'M 8 286.88')]";
+//            String attribute = "fill";
+//            String script = "return window.getComputedStyle(document.querySelector("+cssSelector+").getPropertyValue(" + attribute + ")";
 //
-            String cssSelector = "/*[@id='highcharts-0']/*[name()='svg']/*[name()='g'][7]/*[name()='g'][6]/*[name()='path'][starts-with(@d, 'M 8 286.88')]";
-            String attribute = "fill";
-            String script = "return window.getComputedStyle(document.querySelector("+cssSelector+").getPropertyValue(" + attribute + ")";
-
-//            String script = "return window.getComputedStyle(document.evaluate('/*[@id='highcharts-0']/*[name()='svg']/*[name()='g'][7]/*[name()='g'][6]/*[name()='path'][starts-with(@d, 'M 8 286.88')]').getPropertyValue('fill')";
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-            String content = (String) js.executeScript(script);
-            System.out.println(content);
+////            String script = "return window.getComputedStyle(document.evaluate('/*[@id='highcharts-0']/*[name()='svg']/*[name()='g'][7]/*[name()='g'][6]/*[name()='path'][starts-with(@d, 'M 8 286.88')]').getPropertyValue('fill')";
+//            JavascriptExecutor js = (JavascriptExecutor) driver;
+//            String content = (String) js.executeScript(script);
+//            System.out.println(content);
+            System.out.println(attr);
         }
 
         @After
